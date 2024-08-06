@@ -1,6 +1,6 @@
 const print = @import("std").debug.print;
 
-//Global
+//Global vairables
 const vat: f32 = 1.2;
 
 pub fn main() !void {
