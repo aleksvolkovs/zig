@@ -5,8 +5,8 @@ const international = @import("international.zig");
 const vat: f32 = 1.2;
 
 pub fn main() !void {
-    const sender = international.country{ .name = "USA", .valid = true };
-    const reciepient = international.country{ .name = "Germany", .valid = true };
+    const sender = international.country{ .name = "USA", .continent = international.continent.NorthAmerica, .valid = true };
+    const reciepient = international.country{ .name = "Germany", .continent = international.continent.NorthAmerica, .valid = true };
     const product = international.shipment{ .productName = "iPhone 14 Pro Max", .price = 1099.99, .weight = 0.25 };
     try international.sendShipment(sender, reciepient, product);
 }
